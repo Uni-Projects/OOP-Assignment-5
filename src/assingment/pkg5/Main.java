@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package assingment.pkg5;
 
 /**
@@ -13,6 +7,11 @@ package assingment.pkg5;
 
 import java.util.Map ;
 import java.util.HashMap ;
+import static assingment.pkg5.ExpressionFactory .*;
+
+
+
+
 
 public class Main {
     /**
@@ -28,7 +27,7 @@ public class Main {
  
     BaseExpr e; 
     
-    e = new Add( new Mul( new Const (2.) , new Const(3.)),new Variable ("x"));;
+    e = add(neg(var("x")),con(3.));
     
     System.out.println(e);
     System.out.println(e.eval(store));
